@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useFullscreen, useToggle } from "react-use";
+import FullScreenImage from "./FullScreenImage";
+import { useRef } from "react";
 
 const ImageGallery = () => {
+  const fsRef = useRef(null);
+  const [show, toggle] = useToggle(false);
+  const isFullscreen = useFullscreen(fsRef, show, {
+    onClose: () => toggle(false),
+  });
+
+  const [currentFc, setCurrentFc] = useState([]);
   const [selectedImage, setSelectedImage] = useState([]);
 
   const handleDelete = (index) => {
@@ -75,9 +85,16 @@ const ImageGallery = () => {
 
                   <button
                     onClick={() => handleDelete(index)}
-                    className="btn btn-danger m-0"
+                    className="btn btn-danger m-0 mb-2"
                   >
                     <i class="nc-icon nc-simple-remove"></i>Delete
+                  </button>
+
+                  <button
+                    onClick={() => toggle(setCurrentFc(image))}
+                    className="btn btn-success m-0"
+                  >
+                    full screen
                   </button>
                 </div>
               );
@@ -92,6 +109,10 @@ const ImageGallery = () => {
           ) : (
             <></>
           )}
+        </div>
+
+        <div ref={fsRef}>
+          {isFullscreen && <FullScreenImage toggle={toggle} currentFc={currentFc} />}
         </div>
       </div>
     </div>
