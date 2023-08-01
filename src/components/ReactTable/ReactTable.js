@@ -112,15 +112,14 @@ function Table({ columns, data }) {
   // We don't want to render all of the rows for this example, so cap
   // it for this use case
   // const firstPageRows = rows.slice(0, 10);
-  let pageSelectData = Array.apply(
-    null,
-    Array(pageOptions.length)
-  ).map(function () {});
+  let pageSelectData = Array.apply(null, Array(pageOptions.length)).map(
+    function () {}
+  );
   let numberOfRowsData = [5, 10, 20, 25, 50, 100];
   return (
     <>
       <div className="ReactTable -striped -highlight primary-pagination">
-        <div className="pagination-top">
+        <div style={{ paddingBottom: "1rem" }} className="pagination-top">
           <div className="-pagination">
             <div className="-previous">
               <button

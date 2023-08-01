@@ -112,10 +112,10 @@ function AdminNavbar(props) {
               </button>
             </div>
             <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
-              <span className="d-none d-md-block">
+              {/* <span className="d-none d-md-block">
                 Paper Dashboard PRO React
               </span>
-              <span className="d-block d-md-none">PD PRO React</span>
+              <span className="d-block d-md-none">PD PRO React</span> */}
             </NavbarBrand>
           </div>
           <button
@@ -148,7 +148,7 @@ function AdminNavbar(props) {
               </InputGroup>
             </Form>
             <Nav navbar>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink
                   className="btn-magnify"
                   href="#pablo"
@@ -159,7 +159,7 @@ function AdminNavbar(props) {
                     <span className="d-lg-none d-md-block">Stats</span>
                   </p>
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               <UncontrolledDropdown className="btn-rotate" nav>
                 <DropdownToggle
                   aria-haspopup={true}
@@ -199,7 +199,7 @@ function AdminNavbar(props) {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink
                   className="btn-rotate"
                   href="#pablo"
@@ -210,7 +210,7 @@ function AdminNavbar(props) {
                     <span className="d-lg-none d-md-block">Account</span>
                   </p>
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </Collapse>
         </Container>

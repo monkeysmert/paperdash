@@ -29,6 +29,7 @@ import {
 
 // core components
 import ReactTable from "components/ReactTable/ReactTable.js";
+import { Link } from "react-router-dom";
 
 const dataTable = [
   ["Tiger Nixon", "System Architect", "Edinburgh", "61"],
@@ -75,7 +76,7 @@ const dataTable = [
   ["Olivia Liang", "Support Engineer", "Singapore", "64"],
 ];
 
-function ReactTables() {
+function ReactTables({ TableName }) {
   const [dataState, setDataState] = React.useState(
     dataTable.map((prop, key) => {
       return {
@@ -171,8 +172,8 @@ function ReactTables() {
                   alignItems: "center",
                 }}
               >
-                <CardTitle tag="h4">React-Tables</CardTitle>
-                <Button tag="h4">Add User</Button>
+                <CardTitle tag="h4"> {TableName} </CardTitle>
+                <Button tag="h4">Add user</Button>
               </CardHeader>
               <CardBody>
                 <ReactTable
@@ -181,6 +182,9 @@ function ReactTables() {
                     {
                       Header: "Name",
                       accessor: "name",
+                      Cell: (props) => (
+                        <Link to={`/admin/user-profile/${props.row.index}`}>{props.value}</Link>
+                      ),
                     },
                     {
                       Header: "Position",

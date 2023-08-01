@@ -262,18 +262,28 @@ const routes = [
   //   layout: "/admin",
   // },
 
+
   {
     path: "/user-profile",
     name: "User Profile",
-    icon: "nc-icon nc-calendar-60",
+    icon: "nc-icon nc-circle-10",
     component: <UserProfile />,
     layout: "/admin",
   },
+  
+
+  // {
+  //   path: "/user-profile/:id",
+  //   name: "User Profile",
+  //   icon: "nc-icon nc-circle-10",
+  //   component: <UserProfile />,
+  //   layout: "/admin",
+  // },
 
   {
     path: "/customer",
     name: "Customers",
-    icon: "nc-icon nc-calendar-60",
+    icon: "nc-icon nc-single-02",
     component: <Customers />,
     layout: "/admin",
   },
@@ -281,7 +291,7 @@ const routes = [
   {
     path: "/marketers",
     name: "Marketers",
-    icon: "nc-icon nc-calendar-60",
+    icon: "nc-icon nc-cart-simple",
     component: <Marketers />,
     layout: "/admin",
   },
@@ -289,7 +299,7 @@ const routes = [
   {
     path: "/nurses",
     name: "Nurses",
-    icon: "nc-icon nc-calendar-60",
+    icon: "nc-icon nc-ambulance",
     component: <Nurses />,
     layout: "/admin",
   },
@@ -297,7 +307,7 @@ const routes = [
   {
     path: "/drivers",
     name: "Drivers",
-    icon: "nc-icon nc-calendar-60",
+    icon: "nc-icon nc-bus-front-12",
     component: <Drivers />,
     layout: "/admin",
   },

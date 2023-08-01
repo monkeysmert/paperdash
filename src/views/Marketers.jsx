@@ -3,7 +3,7 @@ import ReactTables from "./tables/ReactTables"
 
 const Marketers = () => {
   return (
-    <ReactTables />
+    <ReactTables TableName="Marketers Table" />
   )
 }
 

@@ -3,7 +3,7 @@ import ReactTables from "./tables/ReactTables"
 
 const Drivers = () => {
   return (
-    <ReactTables />
+    <ReactTables TableName="Drivers Table" />
   )
 }
 
